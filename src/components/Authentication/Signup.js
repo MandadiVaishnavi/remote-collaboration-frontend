@@ -109,7 +109,7 @@ const Signup = () => {
 
       console.log("Sending request to /api/user with config:", config);
       // Send githubToken with the user registration data
-      const { data } = await axios.post('${backendUrl}/api/user', { name, email, password, pic, githubToken }, config);
+      const { data } = await axios.post(`${backendUrl}/api/user`, { name, email, password, pic, githubToken }, config);
 
       console.log("API response data:", data);
 

@@ -79,7 +79,7 @@ const GroupChatModal = ({ children }) => {
       
       // Send users as an array of user IDs directly, no JSON.stringify
       const { data } = await axios.post(
-        "${backendUrl}/api/chat/group",
+        `${backendUrl}/api/chat/group`,
         {
           name: groupChatName,
           repoName: repoName,
