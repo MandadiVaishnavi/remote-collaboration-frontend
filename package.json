@@ -21,10 +21,10 @@
     "react-scrollable-feed": "^2.0.2",
     "socket.io-client": "^4.8.1",
     "web-vitals": "^2.1.4",
-    "@babel/plugin-proposal-private-property-in-object": "^7.15.0"  // Add this dependency
+    "@babel/plugin-proposal-private-property-in-object": "^7.15.0" 
   },
   "scripts": {
-    "start": "HOST=0.0.0.0 PORT=$PORT react-scripts start",  // Use Render's dynamic PORT
+    "start": "HOST=0.0.0.0 PORT=$PORT react-scripts start", 
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
