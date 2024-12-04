@@ -23,6 +23,7 @@ import React, { useState } from "react";
 import { BellIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { useChatState } from "../../Context/ChatProvider";
 import ProfileModal from "./ProfileModal";
+import GitHubTokenModal from "./GitHubTokenModal";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
 import ChatLoading from "../ChatLoading";
@@ -166,6 +167,8 @@ const SideDrawer = () => {
               <ProfileModal user={user}>
                 <MenuItem>My Profile</MenuItem>
               </ProfileModal>
+              <MenuDivider />
+              <GitHubTokenModal user={user} />
               <MenuDivider />
               <MenuItem onClick={logoutHandler}>Logout</MenuItem>
             </MenuList>

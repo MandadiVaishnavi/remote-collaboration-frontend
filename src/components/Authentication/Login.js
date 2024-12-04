@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { useToast } from '@chakra-ui/react';
 import { useHistory } from 'react-router-dom';
+import { useChatState } from "../../Context/ChatProvider";
+
 const backendUrl = process.env.REACT_APP_BACKEND_URL;
 const Login = () => {
     const [show, setShow]= useState(false);
@@ -12,6 +14,8 @@ const Login = () => {
     const toast= useToast();
     const history= useHistory();
     
+    const { setUser } = useChatState(); // Get setUser from context
+
     const handleClick=()=>{
         setShow(!show);
     };
@@ -45,6 +49,7 @@ const Login = () => {
           position:"bottom",
           });
           localStorage.setItem("userInfo", JSON.stringify(data));
+          setUser(data); // Update the context state with the logged-in user
           setLoading(false);
           history.push("/chats")
         }
